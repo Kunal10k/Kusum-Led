@@ -39,11 +39,7 @@
 
 
 .navbar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 1rem;
-    z-index: 990;
+    border-bottom: 1px solid #0000003a;
     @include p-left-right();
 
     .navbar-brand {
@@ -90,7 +86,7 @@
 
         .navbar-brand,
         .nav-link {
-            color: #fff;
+            color: #222;
             font-size: 15px;
             transition: color 0.3s ease;
             font-weight: 500;
@@ -99,4 +95,12 @@
 
 
     }
+}
+
+.header_btn {
+    background: 12px 22px;
+    border: 1px solid #000;
+    color: #000;
+    display: inline-block;
+    border-radius: 30px;
 }

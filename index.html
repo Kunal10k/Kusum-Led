@@ -17,6 +17,12 @@
     <!-- Flickity Carousel CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
+
+    <!-- Swiper CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
@@ -45,12 +51,14 @@
 
         <!-- ======================== NAVBAR ======================== -->
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid border-line shadow-sm">
+            <div class="container-fluid border-line ">
 
                 <!-- Logo Area -->
                 <a class="navbar-brand" href="#">
-                    <img src="assets/img/logo_esspesoft_black.png" alt="" class="img-fluid logo logo-black d-none">
-                    <img src="assets/img/logo_Esspesoft.png" alt="" class="img-fluid logo logo-white">
+                    <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d67734759b60b1ff35eafc_Logo.svg"
+                        alt="" class="img-fluid logo logo-black d-none">
+                    <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d67734759b60b1ff35eafc_Logo.svg"
+                        alt="" class="img-fluid logo logo-white">
                 </a>
 
                 <!-- Navbar Toggler (Mobile) -->
@@ -74,7 +82,7 @@
                             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
 
                             <!-- Services Mega Dropdown -->
-                            <li class="nav-item dropdown position-static">
+                            <!-- <li class="nav-item dropdown position-static">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                     Services
                                 </a>
@@ -116,96 +124,442 @@
                                         </div>
                                     </div>
                                 </div>
+                            </li> -->
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    Service
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Demo1</a></li>
+                                    <li><a class="dropdown-item" href="#">Demo1</a></li>
+                                    <li><a class="dropdown-item" href="#">Demo1</a></li>
+                                </ul>
                             </li>
 
-                            <!-- Other Links -->
                             <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
 
                             <!-- Portfolio Dropdown -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                    Portfolio
+                                    Product
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Web Projects</a></li>
-                                    <li><a class="dropdown-item" href="#">Graphic Design</a></li>
-                                    <li><a class="dropdown-item" href="#">Digital Campaigns</a></li>
+                                    <li><a class="dropdown-item" href="#">Demo1</a></li>
+                                    <li><a class="dropdown-item" href="#">Demo1</a></li>
+                                    <li><a class="dropdown-item" href="#">Demo1</a></li>
                                 </ul>
                             </li>
 
-                            <!-- Contact and CTA -->
-                            <li class="nav-item"><a class="nav-link" href="#">Testimonial</a></li>
+
                             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                             <li class="nav-item mt-2 mt-lg-0 ms-lg-2">
-                                <a href="#" class="btn btn-warning px-3">Get in Touch</a>
+                                <a href="#" class="btn header_btn px-3">
+                                    Contact Us <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
                             </li>
+
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
+        <!-- slider  -->
+        <section class="hero-section">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image: url('https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d79d0e612e79f3706539fb_Hero%20Image%202.jpg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="hero-title">Modern Living Spaces Reimagined</h1>
+                            <a href="/projects" class="hero-button">Explore Now</a>
+                            <div class="hero-clients">
+                                <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d78e390a40e31de35df32e_Ellipse%202691.png"
+                                    alt="">
+                                <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d78e3a51a3e923329e2f01_Ellipse%202693.png"
+                                    alt="">
+                                <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d78e399b7cba72b48b4437_Ellipse%202694.png"
+                                    alt="">
+                                <span>&nbsp;1,000+ Globally Verified Clients</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide"
+                        style="background-image: url('https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d79d0e612e79f3706539fb_Hero%20Image%202.jpg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1 class="hero-title">Modern Living Spaces Reimagined</h1>
+                            <a href="/projects" class="hero-button">Explore Now</a>
+                            <div class="hero-clients">
+                                <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d78e390a40e31de35df32e_Ellipse%202691.png"
+                                    alt="">
+                                <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d78e3a51a3e923329e2f01_Ellipse%202693.png"
+                                    alt="">
+                                <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d78e399b7cba72b48b4437_Ellipse%202694.png"
+                                    alt="">
+                                <span>&nbsp;1,000+ Globally Verified Clients</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Pagination Dots -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+
+        <!-- who are you  -->
+
+        <section class="who-we-are-section">
+            <div class="content-wrapper">
+                <div class="image image-left">
+                    <img src="assets/img/img1.jpg" alt="Left">
+                </div>
+
+                <div class="text-block">
+                    <p class="subheading"><img src="assets/img/fd.svg" alt="" class="svg-play"> WHO WE ARE</p>
+                    <h2 class="mb-4">We Shape Interior Designs,<br>Crafting Timeless and<br>Inspiring Spaces</h2>
+                    <a href="javascript:void(0)" class="btn-more">More About Us <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <div class="image image-right">
+                    <img src="assets/img/img2.jpg" alt="Right">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-heading-block">
+                    <div class="section-subtitle-block">
+                        <div class="breadcrumb-icon">
+                            <!-- SVG icon -->
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="..." fill="#010101" />
+                            </svg>
+                        </div>
+                        <div class="subtitle-text">PROJECTS</div>
+                    </div>
+                    <div class="section-title-block">
+                        <h2 class="section-title">Selected Projects</h2>
+                    </div>
+                </div>
+
+                <div class="projects-wrapper">
+                    <div class="projects-list">
+                        <!-- Project Item 1 -->
+                        <div class="project-item">
+                            <a href="/projects/luxury-skyline" class="project-image-link">
+                                <img src="assets/img/banne.jpg" alt="Luxury Skyline" />
+                            </a>
+                            <div class="project-content">
+                                <a href="/projects/luxury-skyline" class="project-title">Luxury Skyline</a>
+                                <div class="project-location">Miami, FL</div>
+                            </div>
+                        </div>
+
+                        <!-- Project Item 2 -->
+                        <div class="project-item">
+                            <a href="/projects/vintage-glamour" class="project-image-link">
+                                <img src="assets/img/banne.jpg" alt="Luxury Skyline" />
+
+                            </a>
+                            <div class="project-content">
+                                <a href="/projects/vintage-glamour" class="project-title">Vintage Glamour</a>
+                                <div class="project-location">Portland, OR</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-button-wrap">
+                    <a href="/projects" class="primary-button">
+                        <span class="primary-button-text">View All Projects</span>
+                        <span class="arrow-icon">
+                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                                <path d="..." stroke="currentColor" />
+                                <path d="..." stroke="currentColor" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="service-scroll-section">
+            <div class="section-header">
+                <div class="subtitle">● OUR SERVICES</div>
+                <h2>Explore Our Services</h2>
+                <a href="#" class="view-all">View All Services →</a>
+            </div>
+
+            <div class="scroll-container">
+                <div class="sticky-content">
+                    <div class="service-card">
+                        <div class="number">01 – 04</div>
+                        <h3>Residential Interior Design</h3>
+                        <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/680f3885c1a151906e41106d_services%20thumbnail%20(2).jpg"
+                            alt="">
+                        <p>Luxury Interior Design is the pinnacle of interior design services and highly spaces.</p>
+                    </div>
+                       <div class="service-card">
+                        <div class="number">02 – 04</div>
+                        <h3>Residential Interior Design</h3>
+                        <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/680f3885c1a151906e41106d_services%20thumbnail%20(2).jpg"
+                            alt="">
+                        <p>Luxury Interior Design is the pinnacle of interior design services and highly spaces.</p>
+                    </div>
+                       <div class="service-card">
+                        <div class="number">03 – 04</div>
+                        <h3>Residential Interior Design</h3>
+                        <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/680f3885c1a151906e41106d_services%20thumbnail%20(2).jpg"
+                            alt="">
+                        <p>Luxury Interior Design is the pinnacle of interior design services and highly spaces.</p>
+                    </div>
+                       <div class="service-card">
+                        <div class="number">04 – 04</div>
+                        <h3>Residential Interior Design</h3>
+                        <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/680f3885c1a151906e41106d_services%20thumbnail%20(2).jpg"
+                            alt="">
+                        <p>Luxury Interior Design is the pinnacle of interior design services and highly spaces.</p>
+                    </div>
+                </div>
+                <div class="scroller">
+                    <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/680f67ceaa2f71f6d8fbbb63_service%20bg%20(1).jpg"
+                        alt="">
+                    <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/680f66db938a6744eb02ce8f_service%20bg%20(2).jpg"
+                        alt="">
+                    <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/680f66f10b777fd6a734f3fd_Service%20Image%20BG.jpg"
+                        alt="">
+                              <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/680f66f10b777fd6a734f3fd_Service%20Image%20BG.jpg"
+                        alt="">
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="approach-section">
+            <div class="container">
+                <div class="left">
+                    <p class="tagline">OUR APPROACH</p>
+                    <h2 class="title">Stunning Interiors That<br>Tell Your Story</h2>
+                    <img src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0/67d7d829ac2e1b33427b28f4_Apprach%20Image.jpg"
+                        alt="Interior Design" />
+                </div>
+                <div class="right">
+
+                    <p class="description">
+                        We believe that every space tells a story. Founded in 2010 by visionary designer Emily Carter,
+                        our journey began with a simple yet powerful mission: to transform ordinary spaces into
+                        extraordinary experiences.
+                    </p>
+
+                    <div class="counters">
+                        <div class="counter-box">
+                            <span class="counter" data-target="25">0</span>+
+                            <p>Years of Experience</p>
+                        </div>
+                        <div class="counter-box">
+                            <span class="counter" data-target="750">0</span>+
+                            <p>Project Complete</p>
+                        </div>
+                        <div class="counter-box">
+                            <span class="counter" data-target="500">0</span>+
+                            <p>Satisfied Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="video-section">
+            <div class="video-wrapper">
+                <div class="video-block">
+                    <video id="bgVideo" autoplay loop muted playsinline
+                        poster="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0%2F680efce734808eee31461a37_0_Modern%20Living%20Room_Contemporary%20Living%20Room_1280x720-poster-00001.jpg">
+                        <source
+                            src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0%2F680efce734808eee31461a37_0_Modern%20Living%20Room_Contemporary%20Living%20Room_1280x720-transcode.mp4"
+                            type="video/mp4" />
+                        <source
+                            src="https://cdn.prod.website-files.com/67d65e4a7a8964eda8d774b0%2F680efce734808eee31461a37_0_Modern%20Living%20Room_Contemporary%20Living%20Room_1280x720-transcode.webm"
+                            type="video/webm" />
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <button id="videoToggle" class="video-toggle">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="testimonial-section">
+            <div class="container">
+                <p class="tagline">Testimonial</p>
+                <h2 class="section-title">What Our Customers Say</h2>
+
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item">
+                        <div class="image">
+                            <img src="assets/img/testi.jpg" alt="Customer" />
+                        </div>
+                        <div class="content">
+                            <div class="stars">★★★★★ <span>(5.0)</span></div>
+                            <p class="quote">"I absolutely love my new modern living room! The clean lines, neutral
+                                tones, and minimalist interior create such a calming & stylish atmosphere. Highly
+                                recommend their modern interior design services!"</p>
+                            <p class="name">Emma Johnson</p>
+                            <p class="role">Co-Founder, Avanit</p>
+                        </div>
+                    </div>
+
+                    <!-- Add more items here if needed -->
+                </div>
+            </div>
+        </section>
+
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-header">
+                    <div class="left">
+                        <p class="tagline">Blog & Articles</p>
+                        <h2>Our Latest Blog & Articles</h2>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="view-all-btn">View All Articles →</a>
+                    </div>
+                </div>
+
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/67d8f8ebeac97f65a3881386_Image-7.jpg"
+                                alt="Blog 1">
+                        </div>
+                        <div class="blog-meta">
+                            <span>Interior</span> — <span>March 18, 2025</span>
+                        </div>
+                        <h3 class="blog-title">
+                            Transform Your Home With the Modern Interior Design Tips
+                        </h3>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://cdn.prod.website-files.com/67d7ac2a341ae87fc2734eea/67d8f88444b92b674388c258_Image-6.jpg"
+                                alt="Blog 2">
+                        </div>
+                        <div class="blog-meta">
+                            <span>Luxury</span> — <span>March 18, 2025</span>
+                        </div>
+                        <h3 class="blog-title">
+                            Luxury Living Redefined Elegant for the Modern Home
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="banner" style="background-image: url(./assets/img/banne.jpg);">
+            <div class="banner__overlay">
+                <div class="banner__content">
+                    <h1 class="banner__heading">
+                        Seeking Innovative Ideas<br>for Your Interior Design?
+                    </h1>
+                    <a href="#" class="banner__btn">Get In Touch →</a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
         <!-- ======================== FOOTER ======================== -->
         <footer class="footer pt-5 pb-3 bg-light shadow">
             <div class="container-fluid">
                 <div class="row gx-5">
 
-                    <!-- Logo and Company Info -->
+                    <!-- Logo and Tagline -->
                     <div class="col-md-4 mb-4">
                         <img src="assets/img/logo_esspesoft_black.png" alt="" class="img-fluid w-50 mb-3">
                         <p class="text-muted small mb-3">
-                            ESSPESOFT is a web design and digital marketing agency providing service for over 4 years
-                            now to many esteemed clients.
+                            Elegant designs, the personalized touches. Crafting interiors that tell your story.
                         </p>
-                        <p><i class="bi bi-envelope-fill me-2 text-primary"></i>esspesoft@gmail.com</p>
-                        <p><i class="bi bi-telephone-fill me-2 text-primary"></i>+91-7797389661</p>
+                        <p><i class="bi bi-envelope-fill me-2 text-primary"></i>info@intorio.com</p>
+                        <p><i class="bi bi-telephone-fill me-2 text-primary"></i>(123) 456-7890</p>
                     </div>
 
-                    <!-- Office Addresses -->
+                    <!-- Address Block -->
                     <div class="col-md-4 mb-4">
-                        <h6 class="text-uppercase text-muted fw-semibold">Corporate Address</h6>
-                        <p class="small">Bengal Eco Intelligent Park, EM-3, EM Block, Salt Lake, Sector V, Bidhannagar,
-                            Kolkata-700091</p>
-                        <h6 class="text-uppercase text-muted fw-semibold mt-3">Registered Office</h6>
-                        <p class="small">6/22, Poddar Nagar, Prince Anwar Shah Road, Jadavpur, Kolkata-700068</p>
+                        <h6 class="text-uppercase text-muted fw-semibold">Address</h6>
+                        <p class="small">505 Willow Way,<br>New York, NY 10001</p>
                     </div>
 
-                    <!-- Quick Links -->
+                    <!-- Pages Links -->
                     <div class="col-md-2 mb-4">
-                        <h6 class="text-uppercase text-muted fw-semibold">Company</h6>
+                        <h6 class="text-uppercase text-muted fw-semibold">Pages</h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-decoration-none text-dark">Contact</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark">FAQ</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark">Privacy Policy</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark">Get a Quote</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark">Terms of Services</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark">Refund & Cancellation</a></li>
+                            <li><a href="javascript:void(0)" class="text-decoration-none text-dark">Home</a></li>
+                            <li><a href="javascript:void(0)" class="text-decoration-none text-dark">About</a></li>
+                            <li><a href="javascript:void(0)" class="text-decoration-none text-dark">Services</a></li>
+                            <li><a href="javascript:void(0)" class="text-decoration-none text-dark">Contact</a></li>
+                            <li><a href="javascript:void(0)" class="text-decoration-none text-dark">Blog</a></li>
                         </ul>
                     </div>
 
-                    <!-- Social Media Links -->
+                    <!-- CMS Pages & Social Links -->
                     <div class="col-md-2 mb-4">
-                        <h6 class="text-uppercase text-muted fw-semibold">Follow Us</h6>
+                        <h6 class="text-uppercase text-muted fw-semibold">CMS Pages</h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-decoration-none text-dark"><i
-                                        class="bi bi-facebook me-2 text-primary"></i>Facebook</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark"><i
-                                        class="bi bi-instagram me-2 text-danger"></i>Instagram</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark"><i
-                                        class="bi bi-youtube me-2 text-danger"></i>Youtube</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark"><i
-                                        class="bi bi-twitter-x me-2"></i>Twitter</a></li>
+                            <li><a href="javascript:void(0)" class="text-decoration-none text-dark">Service Details</a>
+                            </li>
+                            <li><a href="javascript:void(0)" class="text-decoration-none text-dark">Project Details</a>
+                            </li>
+                            <li><a href="javascript:void(0)" class="text-decoration-none text-dark">Blog Details</a>
+                            </li>
+                        </ul>
+
+                        <h6 class="text-uppercase text-muted fw-semibold mt-3">Follow Us</h6>
+                        <ul class="list-unstyled d-flex gap-2">
+                            <li><a href="javascript:void(0)" class="text-dark"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="javascript:void(0)" class="text-dark"><i class="bi bi-twitter-x"></i></a></li>
+                            <li><a href="javascript:void(0)" class="text-dark"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="javascript:void(0)" class="text-dark"><i class="bi bi-globe"></i></a></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Copyright -->
                 <div class="border-top pt-3 mt-4 text-center small text-muted">
-                    © 2025 <span class="fw-semibold text-primary">ESSPESOFT</span>. All rights reserved.
+                    Copyright © Intorio | Designed by Brandbes - Powered by Webflow
                 </div>
             </div>
         </footer>
+
 
     </main>
 
@@ -213,6 +567,7 @@
 
     <!-- GSAP and ScrollTrigger -->
     <script src="https://unpkg.com/split-type"></script>
+    <!-- ✅ All CDN scripts like gsap, ScrollTrigger should come first -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
@@ -227,6 +582,9 @@
 
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>

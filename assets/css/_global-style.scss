@@ -211,7 +211,7 @@
 body {
 
     font-size: 1rem;
-    background: #F2F1F6;
+
 
     @include mymedia(2000px) {
         font-size: 1.3rem;
@@ -304,5 +304,48 @@ $gradient: linear-gradient(135deg, #4a90e2, #007aff);
     i {
         font-size: 1.4rem;
         color: $white;
+    }
+}
+
+
+
+@mixin headline($mg) {
+    font-size: 25px;
+    line-height: 50px;
+        margin-bottom: $mg;
+
+
+    @include mymedia(991px) {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: $mg;
+
+    }
+
+    @include mymedia(1600px) {
+        font-size: 42px;
+        line-height: 45px;
+        margin-bottom: $mg;
+    }
+}
+
+@mixin svg_play {
+    .svg-play {
+        display: inline-block;
+        animation: spin 4s linear infinite;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 }
