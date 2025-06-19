@@ -139,9 +139,10 @@ toggleBtn.addEventListener("click", function () {
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Calculate horizontal scroll length
 const scrollLength = document.querySelector('.scroller').scrollWidth - window.innerWidth;
 
-// Horizontal scroll for images
+// Horizontal scroll for the scroller
 gsap.to('.scroller', {
     x: () => -scrollLength,
     ease: "none",
@@ -155,10 +156,10 @@ gsap.to('.scroller', {
     }
 });
 
-// Vertical motion for sticky content
+// Vertical scroll for sticky content (faster movement)
 gsap.to('.sticky-content', {
-    y: -100, // moves up, use +100 to go down
-    ease: "none",
+    y: -500, // ← Increase this for faster vertical motion
+    ease: "none", // or try "power2.out" for smooth acceleration
     scrollTrigger: {
         trigger: ".scroll-container",
         start: "top top",
@@ -167,13 +168,50 @@ gsap.to('.sticky-content', {
     }
 });
 
-gsap.to('.sticky-content', {
-    y: -300, // ↑ Move up faster. You can also try +300 to go down
-    ease: "none",
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Left Image: Move bottom to top + fade in
+gsap.from(".image-left", {
+    y: 200, // more vertical movement
+    opacity: 0, // fades in
+    ease: "power2.out",
     scrollTrigger: {
-        trigger: ".scroll-container",
-        start: "top top",
-        end: () => "+=" + scrollLength,
+        trigger: ".who-we-are-section",
+        start: "top 80%", // start earlier
+        end: "bottom top",
         scrub: true
     }
+});
+
+// Right Image: Move top to bottom + fade in
+gsap.from(".image-right", {
+    y: -200,
+    opacity: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".who-we-are-section",
+        start: "top 80%",
+        end: "bottom top",
+        scrub: true
+    }
+});
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".service-item").forEach((item, i) => {
+    gsap.to(item, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            toggleActions: "play none none none"
+        }
+    });
 });

@@ -99,9 +99,9 @@
     }
 }
 
-
 .who-we-are-section {
     padding: 120px 20px;
+    overflow: hidden;
 
     .content-wrapper {
         display: flex;
@@ -111,6 +111,7 @@
         margin: auto;
         gap: 80px;
         position: relative;
+        flex-wrap: wrap;
 
         .image {
             img {
@@ -118,6 +119,8 @@
                 height: auto;
                 border-radius: 16px;
                 box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+                will-change: transform, opacity;
+                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
             &.image-left img {
@@ -137,16 +140,15 @@
                 font-size: 14px;
                 color: #333;
                 margin-bottom: 12px;
-            }
 
-            .svg-play {
-                @include svg_play();
+                .svg-play {
+                    @include svg_play(); // Your mixin for SVG icons
+                }
             }
-
 
             h2 {
-                @include headline(2rem);
-
+                @include headline(2rem); // Your custom heading mixin
+                margin-bottom: 1rem;
             }
 
             .btn-more {
@@ -159,6 +161,10 @@
                 text-decoration: none;
                 transition: all 0.3s ease;
 
+                i {
+                    margin-left: 6px;
+                }
+
                 &:hover {
                     background-color: #000;
                     color: #fff;
@@ -167,6 +173,8 @@
         }
     }
 }
+
+
 
 
 .projects-section {
@@ -800,12 +808,117 @@
             display: flex;
             height: 100%;
             width: max-content;
+            border-radius: 30px;
+
 
             img {
                 width: 100vw;
                 height: 100%;
+                border-radius: 30px;
                 object-fit: cover;
             }
         }
     }
 }
+
+
+.service-section {
+    padding: 80px 20px;
+    background: #f9f9f9;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-heading {
+        text-align: center;
+        margin-bottom: 60px;
+
+        .subtitle-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 16px;
+
+            .breadcrumb-icon {
+                width: 18px;
+                height: 18px;
+
+                svg {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .subtitle-text {
+                font-size: 14px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #a78b76;
+            }
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #222;
+        }
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+
+        .service-item {
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transform: translateY(40px);
+            opacity: 0;
+
+            .image-wrapper {
+                a {
+                    display: block;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        transition: transform 0.4s ease;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
+            .content {
+                padding: 24px;
+
+                .number {
+                    font-size: 18px;
+                    color: #a78b76;
+                    margin-bottom: 12px;
+                }
+
+                .title {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                    color: #333;
+                }
+
+                .summary {
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: #666;
+                }
+            }
+        }
+    }
+}   
