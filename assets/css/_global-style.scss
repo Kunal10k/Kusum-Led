@@ -1,0 +1,308 @@
+@mixin mymedia($minwidth) {
+    @media (min-width: #{$minwidth}) {
+        @content;
+    }
+}
+
+@mixin unorder-list() {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+@mixin p-left-right {
+    @include mymedia(1280px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @include mymedia(1400px) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    @include mymedia(1600px) {
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+}
+
+@mixin p-top-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include mymedia(1280px) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    @include mymedia(1400px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @include mymedia(1600px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@mixin inside-page-padding-t-b {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+
+@mixin blinking-dot {
+    .blinking-dot {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: c.$primary; // You can change the color
+        border-radius: 50%;
+        animation: blink 1s infinite;
+        vertical-align: middle;
+        letter-spacing: 2px;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+}
+
+@mixin small-headline {
+    padding: 6px 22px;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #222;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+@mixin headline($pt, $pb, $color, $weight) {
+    font-size: 65px;
+    line-height: 70px;
+    font-weight: $weight;
+    padding-top: $pt;
+    padding-bottom: $pb;
+    color: $color;
+    text-transform: normal;
+}
+
+@mixin para($color, $font-size, $weight) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $weight;
+}
+
+
+
+@mixin learn-more($width, $font-size, $color) {
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 30px;
+    background-color: c.$white;
+
+
+
+    &.learn-more {
+        width: $width;
+        height: auto;
+
+        .circle {
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 3rem;
+            height: 3rem;
+            background: c.$primary;
+            border-radius: 1.625rem;
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+            .icon {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background: #fff;
+                transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+                &.arrow {
+                    left: 0.625rem;
+                    width: 1.125rem;
+                    height: 0.125rem;
+                    background: none;
+                    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: -0.25rem;
+                        right: 0.0625rem;
+                        width: 0.625rem;
+                        height: 0.625rem;
+                        border-top: 0.125rem solid #fff;
+                        border-right: 0.125rem solid #fff;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        .button-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.75rem 0;
+            margin: 0 0 0 1.85rem;
+            color: $color;
+            font-weight: 600;
+            font-size: $font-size;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        }
+    }
+
+    &:hover {
+        .circle {
+            width: 100%;
+
+            .icon {
+                &.arrow {
+                    background: #fff;
+                    transform: translate(1rem, 0);
+                }
+            }
+        }
+
+        .button-text {
+            color: #fff;
+        }
+    }
+
+}
+
+
+
+
+body {
+
+    font-size: 1rem;
+    background: #F2F1F6;
+
+    @include mymedia(2000px) {
+        font-size: 1.3rem;
+    }
+}
+
+.container-fluid {
+    max-width: 1920px;
+}
+
+
+// Variables
+$white: #ffffff;
+$whatsapp-green: #25D366;
+$gradient: linear-gradient(135deg, #4a90e2, #007aff);
+
+// Animations
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// Common Button Style
+.back-to-top,
+.whatsapp-btn {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: $white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+// Back to Top Button (Left)
+.back-to-top {
+    bottom: 30px;
+    left: 30px;
+    background: $gradient;
+    border: 2px dashed $white;
+    display: none;
+    animation: slideInLeft 0.5s forwards;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    i {
+        color: $white;
+    }
+}
+
+// WhatsApp Button (Right)
+.whatsapp-btn {
+    bottom: 30px;
+    right: 30px;
+    background-color: $whatsapp-green;
+    animation: slideInRight 0.5s forwards;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    i {
+        font-size: 1.4rem;
+        color: $white;
+    }
+}

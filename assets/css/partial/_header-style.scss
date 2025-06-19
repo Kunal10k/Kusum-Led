@@ -1,0 +1,102 @@
+@include mymedia(992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+
+/* Mega Menu Styles */
+.mega-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+
+    .col {
+        min-width: 200px;
+    }
+}
+
+/* Mega Menu styles */
+.mega-menu {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    top: 100%;
+    border-radius: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Ensure dropdown stays full width on desktop */
+@media (max-width: 991.98px) {
+    .mega-menu {
+        position: static !important;
+        width: 100% !important;
+    }
+}
+
+
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 1rem;
+    z-index: 990;
+    @include p-left-right();
+
+    .navbar-brand {
+        .logo {
+            height: 60px;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-black {
+            display: none;
+        }
+
+        .logo-white {
+            display: block;
+        }
+    }
+
+    .border-line {
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        padding: 6px;
+        border-radius: 12px;
+
+        background-repeat: no-repeat;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        &.scrolled {
+            background-color: #fff !important;
+
+            .navbar-brand {
+                .logo-black {
+                    display: block !important;
+                }
+
+                .logo-white {
+                    display: none !important;
+                }
+            }
+
+            .nav-link,
+            .navbar-brand {
+                color: #000 !important;
+            }
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+
+
+    }
+}
