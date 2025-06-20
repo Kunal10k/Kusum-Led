@@ -10,47 +10,7 @@
     list-style-type: none;
 }
 
-@mixin p-left-right {
-    @include mymedia(1280px) {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
 
-    @include mymedia(1400px) {
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-
-    @include mymedia(1600px) {
-        padding-left: 140px;
-        padding-right: 140px;
-    }
-}
-
-@mixin p-top-bottom {
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    @include mymedia(1280px) {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    @include mymedia(1400px) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    @include mymedia(1600px) {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-}
-
-@mixin inside-page-padding-t-b {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
 
 
 
@@ -271,23 +231,7 @@ $gradient: linear-gradient(135deg, #4a90e2, #007aff);
     transition: transform 0.3s ease;
 }
 
-// Back to Top Button (Left)
-.back-to-top {
-    bottom: 30px;
-    left: 30px;
-    background: $gradient;
-    border: 2px dashed $white;
-    display: none;
-    animation: slideInLeft 0.5s forwards;
 
-    &:hover {
-        transform: scale(1.1);
-    }
-
-    i {
-        color: $white;
-    }
-}
 
 // WhatsApp Button (Right)
 .whatsapp-btn {
@@ -312,7 +256,7 @@ $gradient: linear-gradient(135deg, #4a90e2, #007aff);
 @mixin headline($mg) {
     font-size: 25px;
     line-height: 50px;
-        margin-bottom: $mg;
+    margin-bottom: $mg;
 
 
     @include mymedia(991px) {
@@ -326,26 +270,53 @@ $gradient: linear-gradient(135deg, #4a90e2, #007aff);
         font-size: 42px;
         line-height: 45px;
         margin-bottom: $mg;
+
     }
 }
 
-@mixin svg_play {
-    .svg-play {
-        display: inline-block;
-        animation: spin 4s linear infinite;
-        vertical-align: middle;
-        width: 20px;
-        height: 20px;
-        margin-right: 6px;
+
+
+@mixin subheading {
+    border-radius: 0 15px 0 15px;
+    background-color: #000;
+    padding: 4px 15px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+
+
+
+
+}
+
+
+@mixin p-tb {
+    padding: 30px 0;
+
+    @include mymedia(1099px) {
+        padding: 60px 0;
+    }
+    @include mymedia(1600px) {
+        padding: 80px 0;
+
+    }
+}
+
+.svg-play {
+    display: inline-block;
+    animation: spin 4s linear infinite;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
 
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
+    100% {
+        transform: rotate(360deg);
     }
 }
