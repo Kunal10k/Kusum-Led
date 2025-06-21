@@ -249,3 +249,43 @@ gsap.from('[animate] .line', {
         toggleActions: 'play none none none' // animation behavior
     }
 });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from('.zoom-img', {
+    scale: 1.2, // start zoomed in
+    opacity: 0, // optional fade-in
+    duration: 1.5,
+    ease: 'power2.out',
+    scrollTrigger: {
+        trigger: '.zoom-img',
+        start: 'top 80%', // when top of image hits 80% of viewport
+        toggleActions: 'play none none none'
+    }
+});
+
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Split the text
+let typeSplits = new SplitType('.animate-text', {
+    types: 'lines, words, chars',
+    tagName: 'span'
+});
+
+// Animate on scroll
+gsap.from('.animate-text .line', {
+    y: '110%',
+    opacity: 1,
+    rotationZ: 10,
+    duration: 0.5,
+    ease: 'back.out',
+    stagger: 0.1,
+    scrollTrigger: {
+        trigger: '.animate-text',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+    }
+});

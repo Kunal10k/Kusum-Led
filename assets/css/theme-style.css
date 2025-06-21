@@ -1246,6 +1246,11 @@ body {
   }
 }
 
+.zoom-img {
+  width: 100%;
+  transform-origin: center center;
+}
+
 .footer .footer-logo {
   font-size: 1.5rem;
   color: #111;
