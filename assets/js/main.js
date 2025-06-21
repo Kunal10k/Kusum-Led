@@ -224,3 +224,28 @@ function updateScrollZoom() {
 }
 
 requestAnimationFrame(updateScrollZoom);
+
+
+
+//test animation 
+
+
+// Split the text into lines, words, and characters
+let typeSplit = new SplitType('[animate]', {
+    types: 'lines, words, chars',
+    tagName: 'span'
+});
+
+// Animate lines when the element scrolls into view
+gsap.from('[animate] .line', {
+    y: '100%',
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.1,
+    ease: 'power1.out',
+    scrollTrigger: {
+        trigger: '[animate]',
+        start: 'top 80%', // when top of [animate] hits 80% of the viewport height
+        toggleActions: 'play none none none' // animation behavior
+    }
+});
